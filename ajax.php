@@ -1,7 +1,7 @@
 <?php    
 
-   $partnet_key = "96bcf084ae55a3840c8e1b5c36b0a697";// key tại gachthe1s
-   $partner_id = "1655649461";   //Partner ID tại gachthe1s.com
+   $partnet_key = "05a5375d09530d6e5051f7f93f93e87a";// key tại gachthe1s
+   $partner_id = "1849867461";   //Partner ID tại gachthe1s.com
     // điền key để  nạp thẻ
     // tham khảo nhiêu loại code khác tại dailycodevietnam.blogspot.com
        // Allow from any origin
